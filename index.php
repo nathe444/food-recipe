@@ -1,3 +1,8 @@
+<?php
+include('./partials/header.php');
+include('./config/database.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +17,7 @@
     * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     .great-vibes-regular {
@@ -22,77 +28,6 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0px;
-      align-items: center;
-      gap: 30px;
-      position: sticky;
-      top: 0;
-      left: 0;
-      padding: 20px 50px;
-      box-shadow: 0px 3px 8px rgba(210, 211, 210, 0.9);
-      background-color: white;
-      z-index: 2;
-    }
-
-    .nav-left {
-      flex: 1;
-      /* background-color: red; */
-    }
-
-    .nav-left h1 {
-      font-family: "Great Vibes";
-      font-size: 38px;
-    }
-
-    .nav-center {
-      flex: 2;
-      /* background-color: blue; */
-    }
-
-    .nav-center ul {
-      display: flex;
-      justify-content: space-around;
-      list-style: none;
-    }
-
-    .nav-center ul li a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      font-size: 18px;
-      position: relative;
-      padding: 5px 0;
-    }
-
-    .nav-center ul li a::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: grey;
-      transition: width 0.5s ease;
-    }
-
-    .nav-center ul li a:hover::before {
-      width: 100%;
-    }
-
-    .nav-right {
-      flex: 1;
-      /* background-color: bisque; */
-    }
-
-    .nav-right ul {
-      display: flex;
-      justify-content: space-around;
-      padding: 0px 0px 0px 70px;
     }
 
     .landing {
@@ -149,7 +84,7 @@
     .landing-recipes>h1,
     .landing-recipes>p {
       text-align: center;
-      width: 800px;
+      max-width: 800px;
       margin: auto;
     }
 
@@ -174,7 +109,8 @@
 
     .recipe-card {
       width: 400px;
-      background-color: #f9f8e9;
+      background-color: #e0f7fa;
+
       border-radius: 20px;
       box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
       overflow: hidden;
@@ -183,7 +119,7 @@
 
     .recipe-card:hover {
       cursor: pointer;
-      scale: 1.13;
+      scale: 1.1;
     }
 
     .recipe-image img {
@@ -323,6 +259,8 @@
       text-align: right;
     }
 
+
+
     /* .about-image img {
         max-width: 100%;
         height: auto;
@@ -331,28 +269,8 @@
   </style>
 </head>
 
+
 <body>
-  <div class="navbar">
-    <div class="nav-left">
-      <h1>Food Recipe</h1>
-    </div>
-
-    <div class="nav-center">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="recipes.php">Recipes</a></li>
-        <li><a href="add.php">Post Recipe</a></li>
-        <li><a href="contact.php">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="nav-right">
-      <ul>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="register.php">Register</a></li>
-      </ul>
-    </div>
-  </div>
 
   <div class="landing">
     <div class="landing-left">

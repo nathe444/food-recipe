@@ -15,4 +15,3 @@ try {
   echo 'alert("' . $e->getMessage() . '");';
   echo '</script>';
 }
-?>;

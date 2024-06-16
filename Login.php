@@ -130,6 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           if ($compare) {
             // session_start();
             $_SESSION['username'] = $username;
+            $_SESSION['userid'] = $row['user_id'];
             $_SESSION["logged_in"] = true;
             header("Location: index.php");
             exit();

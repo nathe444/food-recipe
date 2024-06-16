@@ -28,6 +28,21 @@ include('./config/database.php');
       background-size: 100% 100%;
       color: white;
       flex-direction: column;
+      gap: 20px;
+    }
+
+    .login-btn {
+      background-color: #402f57;
+      color: #fff;
+      width: 150px;
+      height: 47px;
+    }
+
+
+    .login-btn:hover {
+      background-color: #4a5568;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
 
     .container {
@@ -106,8 +121,16 @@ include('./config/database.php');
         <input type="password" id="password" name="password" required />
       </div>
       <button type="submit">Register</button>
+
+      <div style="display: flex; margin-top: 15px; justify-content:center; gap:5px;">
+        <P>Have an account ?</P>
+        <a href="login.php">Login</a>
+      </div>
+
     </form>
   </div>
+
+
 
 </body>
 
