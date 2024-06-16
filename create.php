@@ -10,6 +10,17 @@ include('./config/database.php');
 //   echo "Error selecting database: " . $conn->error;
 // }
 
+// $sql = "CREATE TABLE reviews (
+//   id INT AUTO_INCREMENT PRIMARY KEY,
+//   recipe_id INT NOT NULL,
+//   user_id INT NOT NULL,
+//   review TEXT,
+//   FOREIGN KEY (recipe_id) REFERENCES recipes(recipe_id),
+//   FOREIGN KEY (user_id) REFERENCES users(user_id)
+// )";
+
+
+
 // $sql = "CREATE TABLE recipes (
 //     recipe_id INT AUTO_INCREMENT PRIMARY KEY,
 //     title VARCHAR(255) NOT NULL,
@@ -23,4 +34,4 @@ include('./config/database.php');
 //     FOREIGN KEY (user_id) REFERENCES users(user_id)
 // )";
 
-// mysqli_query($conn, $sql);
+mysqli_query($conn, $sql);

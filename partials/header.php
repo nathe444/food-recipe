@@ -29,11 +29,13 @@ if (isset($_POST['logout-submit'])) {
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins';
     }
 
     .great-vibes-regular {
@@ -65,7 +67,8 @@ if (isset($_POST['logout-submit'])) {
       /* background-color: red; */
     }
 
-    .nav-left h1 {
+    .nav-left h1,
+    .nav-left span {
       font-family: "Great Vibes";
       font-size: 38px;
     }
@@ -203,7 +206,7 @@ if (isset($_POST['logout-submit'])) {
 
         <?php } ?>
 
-        <li><a href="contact.php">Contact</a></li>
+        <li><a href="contact_me.php">Contact</a></li>
       </ul>
     </div>
 

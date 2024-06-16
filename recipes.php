@@ -29,11 +29,12 @@ $result = mysqli_query($conn, $sql);
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 40px;
-      gap: 55px;
+      margin-top: 25px;
+      gap: 30px;
     }
 
-    .title {
+    .title,
+    .title span {
       text-align: center;
       font-family: "Great Vibes";
       font-weight: 900;
@@ -59,7 +60,7 @@ $result = mysqli_query($conn, $sql);
     .search-button {
       background-color: orange;
       border: none;
-      padding: 8px;
+      padding: 11px;
       border-top-right-radius: 18px;
       border-bottom-right-radius: 18px;
       cursor: pointer;
@@ -76,7 +77,7 @@ $result = mysqli_query($conn, $sql);
     }
 
     .container {
-      padding: 40px;
+      padding: 15px 40px;
       color: #000;
     }
 
@@ -97,7 +98,7 @@ $result = mysqli_query($conn, $sql);
 
     .recipe-image img {
       width: 100%;
-      height: 270px;
+      height: 250px;
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
     }

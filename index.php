@@ -53,6 +53,10 @@ include('./config/database.php');
       color: black;
     }
 
+    .landing-left p {
+      line-height: 1.3;
+    }
+
     .food {
       color: orange;
       margin: 0px 12px 0px 0px;
@@ -84,7 +88,7 @@ include('./config/database.php');
     .landing-recipes>h1,
     .landing-recipes>p {
       text-align: center;
-      max-width: 800px;
+      max-width: 820px;
       margin: auto;
     }
 
@@ -98,6 +102,7 @@ include('./config/database.php');
       margin-top: 15px;
       color: rgb(111, 109, 109);
       margin-bottom: 50px;
+
     }
 
     .landing-recipes-container {
@@ -185,18 +190,31 @@ include('./config/database.php');
 
     .category-card {
       padding: 20px;
-      background-color: rgb(239, 234, 228);
+      background-color: orange;
       box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.5);
       border-radius: 20px;
       color: rgb(89, 85, 85);
       font-weight: bold;
-      transition: 0.4s ease-out;
+      transition: 0.3s ease-out;
     }
+
+    .category-card a {
+      text-decoration: none;
+      color: black;
+    }
+
 
     .category-card:hover {
       cursor: pointer;
-      background-color: rgb(89, 85, 85);
+      background-color: orangered;
       color: rgb(239, 234, 228);
+    }
+
+    .category-card:hover {
+      a {
+        text-decoration: underline;
+      }
+
     }
 
     .about-us {
@@ -278,14 +296,7 @@ include('./config/database.php');
         Make Your Own Fresh <br /><span class="food">Food</span>in a Easy Way
       </h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        ullam cumque maiores laborum, eaque tenetur sint quas error, et
-        repudiandae laboriosam ea, vitae molestiae illo blanditiis doloribus
-        magni maxime. Fuga! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Dolorem asperiores cumque ratione iure esse sed, voluptatibus
-        quia ipsum nihil, voluptate explicabo magnam illo nemo animi libero
-        vero obcaecati? Illum, dolorem.
-      </p>
+        Make Your Own Fresh Food in an Easy Way! Discover the joy of cooking fresh, wholesome meals in the comfort of your own kitchen. Whether you're an experienced chef or just starting out, our recipes are designed to be easy to follow, ensuring you can create delicious dishes with ease. Embrace the art of cooking and bring a burst of flavor to your meals with fresh ingredients and simple techniques.Let's make cooking fun, easy, and most importantly, fresh!
     </div>
 
     <div class="landing-right">
@@ -298,42 +309,46 @@ include('./config/database.php');
 
     <div class="categories-container">
       <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=breakfast">Breakfast</a>
       </div>
       <div class="category-card">
-        <p>Breakfast</p>
-      </div>
-
-      <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=lunch">Lunch</a>
       </div>
 
       <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=dinner">Dinner</a>
       </div>
 
       <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=dessert">Dessert</a>
       </div>
 
       <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=snack">Snack</a>
       </div>
 
       <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=appetizer">Appetizer</a>
       </div>
 
       <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=beverage">Beverage</a>
       </div>
 
       <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=soup">Soup</a>
       </div>
 
       <div class="category-card">
-        <p>Breakfast</p>
+        <a href="recipes.php?search=drink">Drink</a>
+      </div>
+
+      <div class="category-card">
+        <a href="recipes.php?search=meat">Meat</a>
+      </div>
+
+      <div class="category-card">
+        <a href="recipes.php?search=vegan">Vegan</a>
       </div>
     </div>
   </div>
@@ -341,10 +356,7 @@ include('./config/database.php');
   <div class="landing-recipes">
     <h1>Simple And Tasty Recipes</h1>
     <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga sint
-      provident minima quidem, ullam vitae hic necessitatibus dolore vero
-      ipsam nulla fugiat cumque minus consectetur odit alias officiis maxime
-      esse.
+      Discover a collection of easy-to-make and delicious recipes that will delight your taste buds. Our recipes are crafted to be simple yet flavorful, perfect for both beginners and experienced cooks. Whether you're looking for a quick meal after a busy day or a sumptuous dish to impress your guests, we've got you covered.
     </p>
 
     <div class="landing-recipes-container">
@@ -473,13 +485,7 @@ include('./config/database.php');
         Kitchen
       </h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-        adipisci quis eos asperiores dolore. Unde modi veritatis corrupti
-        adipisci hic labore in atque fugiat non, id, molestiae maiores, quae
-        ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Praesentium dolorem assumenda eos odio molestiae voluptatibus
-        blanditiis repellendus vitae sapiente dolorum, totam delectus
-        distinctio exercitationem sequi id, quia nostrum alias. Placeat!
+        Unlock the joy of cooking with our easy-to-follow recipes and become the chef you've always wanted to be. Whether you're a novice or a seasoned home cook, our recipes are designed to inspire and delight. Create delicious dishes from the comfort of your kitchen and experience the satisfaction of homemade meals. Enjoy the process of cooking with fresh, wholesome ingredients and see how simple it can be to make restaurant-quality dishes at home. With our guidance, everyone can be a chef in their own kitchen and turn every meal into a culinary masterpiece.
       </p>
     </div>
   </div>
