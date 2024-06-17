@@ -115,7 +115,6 @@ include('./config/database.php');
     .recipe-card {
       width: 400px;
       background-color: #e0f7fa;
-
       border-radius: 20px;
       box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
       overflow: hidden;
@@ -225,6 +224,7 @@ include('./config/database.php');
       background-size: cover;
       height: 550px;
       padding: 0px 100px;
+      margin-top: 100px;
     }
 
     .about-content {
@@ -284,6 +284,91 @@ include('./config/database.php');
         height: auto;
         border-radius: 10px;
       } */
+
+    @media(max-width:950px) {
+
+      .landing {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0px 50px;
+      }
+
+      .landing-2 {
+        flex-direction: column;
+      }
+
+      .landing-left,
+      .landing-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        text-align: center;
+      }
+
+      .landing-right img {
+        width: 80%;
+        max-height: 270px;
+        margin: 0 auto;
+      }
+
+      @media(580px<width<940px) {
+        .landing-right img {
+          width: 60%;
+          max-height: 350px;
+          margin: 0 auto;
+        }
+      }
+
+
+      .landing-left p {
+        margin: 0px;
+      }
+
+      .landing-left h1,
+      .categories h1,
+      .landing-recipes>h1 {
+        font-size: 42px;
+        text-align: center;
+
+      }
+
+      .categories h1 {
+        margin: 10px 0px 50px 0px;
+      }
+
+      .landing-recipes>h1 {
+        margin: 70px 0px 40px 0px;
+      }
+
+      .landing-recipes-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content: center;
+      }
+
+      .recipe-card {
+        width: 300px;
+      }
+
+
+
+    }
+
+
+    @media(max-width:1100px) {
+      .about-us {
+        height: 820px;
+        padding: 0px 00px;
+      }
+
+      .about-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+      }
+    }
   </style>
 </head>
 
@@ -475,7 +560,7 @@ include('./config/database.php');
       </div>
     </div>
   </div>
-  <div class="landing">
+  <div class="landing landing-2">
     <div class="landing-right">
       <img src="./images/chef.png" alt="" />
     </div>

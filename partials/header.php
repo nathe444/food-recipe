@@ -54,8 +54,7 @@ if (isset($_POST['logout-submit'])) {
       align-items: center;
       gap: 30px;
       position: sticky;
-      top: 0;
-      left: 0;
+
       padding: 20px 50px;
       box-shadow: 0px 3px 8px rgba(210, 211, 210, 0.9);
       background-color: white;
@@ -171,15 +170,36 @@ if (isset($_POST['logout-submit'])) {
     .nav-right {
       flex: 1;
       /* background-color: bisque; */
-      display: flex;
-      justify-content: end;
     }
 
     .nav-right ul {
       display: flex;
-      justify-content: center;
+      justify-content: end;
       gap: 10px;
-      padding: 0px 0px 0px 70px;
+    }
+
+
+    @media(max-width:950px) {
+      .navbar {
+        background-color: #402f57;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-center ul,
+      .nav-right ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .nav-right ul,
+      .nav-right {
+        justify-content: center;
+        align-items: center;
+      }
     }
   </style>
 
@@ -190,6 +210,10 @@ if (isset($_POST['logout-submit'])) {
   <div class="navbar">
     <div class="nav-left">
       <h1>Food <span style="color:orange;">Recipe</span> </h1>
+    </div>
+
+    <div class="center-and-left">
+
     </div>
 
     <div class="nav-center">

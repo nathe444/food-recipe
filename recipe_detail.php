@@ -54,7 +54,7 @@ mysqli_close($conn);
     body {
       font-family: 'Roboto', sans-serif;
       background: #f7f7f7;
-      color: #333;
+      /* color: #333; */
       margin: 0;
       padding: 0;
 
@@ -75,6 +75,7 @@ mysqli_close($conn);
       flex-direction: column;
       gap: 0px;
       max-width: 600px;
+      margin: 0 auto;
     }
 
     .recipe-header {
@@ -92,7 +93,7 @@ mysqli_close($conn);
     }
 
     .recipe-header img {
-      width: 300px;
+      width: 60%;
       height: auto;
       border-radius: 10px;
       margin-top: 20px;

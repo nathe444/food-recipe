@@ -91,6 +91,16 @@ $result = mysqli_query($conn, $sql);
       margin-bottom: 20px;
     }
 
+    @media(max-width:500px) {
+      .recipe-card {
+        width: 350px;
+      }
+
+      .search-bar input {
+        width: 300px;
+      }
+    }
+
     .recipe-card:hover {
       cursor: pointer;
       transform: scale(1.1);
