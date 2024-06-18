@@ -19,6 +19,7 @@ $result = mysqli_query($conn, $sql);
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recipe List</title>
@@ -89,6 +90,7 @@ $result = mysqli_query($conn, $sql);
       overflow: hidden;
       transition: transform 0.33s;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     @media(max-width:500px) {
@@ -107,7 +109,7 @@ $result = mysqli_query($conn, $sql);
     }
 
     .recipe-image img {
-      width: 100%;
+      width: 80%;
       height: 250px;
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
@@ -188,7 +190,7 @@ $result = mysqli_query($conn, $sql);
 
   <div class="container">
 
-    <div class="recipe-list">
+    <div class="recipe-list" data-aos="fade-up" data-aos-duration="1500">
       <?php
       if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
@@ -217,11 +219,11 @@ $result = mysqli_query($conn, $sql);
       ?>
     </div>
   </div>
-
-  <script>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
   </script>
-
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

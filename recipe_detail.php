@@ -50,6 +50,7 @@ mysqli_close($conn);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo htmlspecialchars($recipe['title']); ?> - Recipe Details</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -239,7 +240,7 @@ mysqli_close($conn);
   <div class="container">
 
     <div class="container-up">
-      <div class="recipe-header-info">
+      <div class="recipe-header-info" data-aos="zoom-in-down" data-aos-duration="1500">
         <div class="recipe-header">
           <h1><?php echo htmlspecialchars($recipe['title']); ?></h1>
           <div class="recipe-image">
@@ -261,7 +262,7 @@ mysqli_close($conn);
 
 
 
-      <div class="instruction-and-ingredients">
+      <div class="instruction-and-ingredients" data-aos="zoom-in-up" data-aos-duration="1500">
         <div class="recipe-section">
           <h2>Ingredients</h2>
           <p><?php echo nl2br(htmlspecialchars($recipe['ingredients'])); ?></p>
@@ -275,7 +276,7 @@ mysqli_close($conn);
       </div>
     </div>
 
-    <div class="reviews-list">
+    <div class="reviews-list" data-aos="fade-up" data-aos-duration="1500">
       <h1>Review list</h1>
       <?php if (mysqli_num_rows($reviewsResult) > 0) : ?>
         <?php while ($review = mysqli_fetch_assoc($reviewsResult)) : ?>
@@ -294,7 +295,7 @@ mysqli_close($conn);
 
 
 
-    <div class="reviews-section">
+    <div class="reviews-section" data-aos="fade-up" data-aos-duration="1500">
       <h2>Reviews</h2>
 
       <?php if (isset($_SESSION['userid'])) : ?>
@@ -313,6 +314,12 @@ mysqli_close($conn);
 
     <a href="recipes.php" class="back-link">Back to Recipe List</a>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
+  </script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

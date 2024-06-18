@@ -13,6 +13,7 @@ include('./config/database.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Contact Form</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
@@ -148,6 +149,10 @@ include('./config/database.php');
         padding-left: 0;
       }
 
+      .contact-info div {
+        font-size: 16px;
+      }
+
       .contact-form .text-box {
         width: 100%;
       }
@@ -196,13 +201,13 @@ include('./config/database.php');
 
   <div class="container">
     <div class="contact-section">
-      <div class="contact-info">
+      <div class="contact-info" data-aos="fade-right" data-aos-duration="1500">
         <div><i class="fas fa-map-marker-alt"></i>AA, Ethiopia</div>
         <div><i class="fas fa-envelope"></i>natnaelmulugeta1116@gmail.com</div>
         <div><i class="fas fa-phone"></i>+251 993 944 704</div>
         <div><i class="fas fa-clock"></i>Mon - Fri 9:00 AM to 4:00 PM</div>
       </div>
-      <div class="contact-form">
+      <div class="contact-form" data-aos="fade-left" data-aos-duration="1500">
         <h2>Contact Us</h2>
         <form class="contact" action="" method="post">
           <input type="text" name="name" class="text-box" placeholder="Your Name" required>
@@ -214,6 +219,11 @@ include('./config/database.php');
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
+  </script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

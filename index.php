@@ -10,6 +10,8 @@ include('./config/database.php');
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food recipe</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
@@ -349,9 +351,6 @@ include('./config/database.php');
       .recipe-card {
         width: 300px;
       }
-
-
-
     }
 
 
@@ -376,7 +375,7 @@ include('./config/database.php');
 <body>
 
   <div class="landing">
-    <div class="landing-left">
+    <div class="landing-left" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="">
       <h1 class="burger-h1">
         Make Your Own Fresh <br /><span class="food">Food</span>in a Easy Way
       </h1>
@@ -384,15 +383,15 @@ include('./config/database.php');
         Make Your Own Fresh Food in an Easy Way! Discover the joy of cooking fresh, wholesome meals in the comfort of your own kitchen. Whether you're an experienced chef or just starting out, our recipes are designed to be easy to follow, ensuring you can create delicious dishes with ease. Embrace the art of cooking and bring a burst of flavor to your meals with fresh ingredients and simple techniques.Let's make cooking fun, easy, and most importantly, fresh!
     </div>
 
-    <div class="landing-right">
+    <div class="landing-right" data-aos="flip-left" data-aos-duration="1500">
       <img src="./images/burger.png" alt="" />
     </div>
   </div>
 
   <div class="categories">
-    <h1>Categories</h1>
+    <h1 data-aos="fade-up" data-aos-duration="1500">Categories</h1>
 
-    <div class="categories-container">
+    <div class="categories-container" data-aos="fade-right" data-aos-duration="1500">
       <div class="category-card">
         <a href="recipes.php?search=breakfast">Breakfast</a>
       </div>
@@ -439,13 +438,13 @@ include('./config/database.php');
   </div>
 
   <div class="landing-recipes">
-    <h1>Simple And Tasty Recipes</h1>
-    <p>
+    <h1 data-aos="fade-left" data-aos-duration="1500">Simple And Tasty Recipes</h1>
+    <p data-aos="fade-left" data-aos-duration="1500">
       Discover a collection of easy-to-make and delicious recipes that will delight your taste buds. Our recipes are crafted to be simple yet flavorful, perfect for both beginners and experienced cooks. Whether you're looking for a quick meal after a busy day or a sumptuous dish to impress your guests, we've got you covered.
     </p>
 
     <div class="landing-recipes-container">
-      <div class="recipe-card">
+      <div class="recipe-card" data-aos="zoom-in" data-aos-duration="1500">
         <div class="recipe-image">
           <img src="./images/choco.jpg" alt="" />
         </div>
@@ -464,7 +463,7 @@ include('./config/database.php');
         </div>
       </div>
 
-      <div class="recipe-card">
+      <div class="recipe-card" data-aos="zoom-out" data-aos-duration="1500">
         <div class="recipe-image">
           <img src="./images/choco.jpg" alt="" />
         </div>
@@ -483,7 +482,7 @@ include('./config/database.php');
         </div>
       </div>
 
-      <div class="recipe-card">
+      <div class="recipe-card" data-aos="zoom-in" data-aos-duration="1500">
         <div class="recipe-image">
           <img src="./images/choco.jpg" alt="" />
         </div>
@@ -502,7 +501,7 @@ include('./config/database.php');
         </div>
       </div>
 
-      <div class="recipe-card">
+      <div class="recipe-card" data-aos="zoom-out" data-aos-duration="1500">
         <div class="recipe-image">
           <img src="./images/choco.jpg" alt="" />
         </div>
@@ -521,7 +520,7 @@ include('./config/database.php');
         </div>
       </div>
 
-      <div class="recipe-card">
+      <div class="recipe-card" data-aos="zoom-in" data-aos-duration="1500">
         <div class="recipe-image">
           <img src="./images/choco.jpg" alt="" />
         </div>
@@ -540,7 +539,7 @@ include('./config/database.php');
         </div>
       </div>
 
-      <div class="recipe-card">
+      <div class="recipe-card" data-aos="zoom-out" data-aos-duration="1500">
         <div class="recipe-image">
           <img src="./images/choco.jpg" alt="" />
         </div>
@@ -561,10 +560,10 @@ include('./config/database.php');
     </div>
   </div>
   <div class="landing landing-2">
-    <div class="landing-right">
+    <div class="landing-right" data-aos="flip-right" data-aos-duration="1500">
       <img src="./images/chef.png" alt="" />
     </div>
-    <div class="landing-left">
+    <div class="landing-left" data-aos="fade-down" data-aos-duration="1500">
       <h1 class="chef-h1">
         Everyone Can Be A <br />Chef In Their Own <br />
         Kitchen
@@ -575,7 +574,7 @@ include('./config/database.php');
     </div>
   </div>
   <section class="about-us">
-    <div class="about-content">
+    <div class="about-content" data-aos="fade-up" data-aos-duration="1500">
       <h2 class="about-title">About Our Recipe Website</h2>
       <p class="about-description">
         Welcome to our recipe website! We are a team of passionate home cooks
@@ -602,6 +601,11 @@ include('./config/database.php');
         <img src="./images/dishes.png" alt="About Us Image" />
       </div> -->
   </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

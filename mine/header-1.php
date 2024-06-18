@@ -3,7 +3,9 @@ session_start();
 include('./config/database.php');
 $user = isset($_SESSION['username']);
 
+
 if (isset($_POST['logout-submit'])) {
+
   try {
     if (isset($user)) {
       session_unset();
@@ -51,6 +53,7 @@ if (isset($_POST['logout-submit'])) {
       justify-content: space-between;
       align-items: center;
       gap: 30px;
+      position: sticky;
       padding: 20px 50px;
       box-shadow: 0px 3px 8px rgba(210, 211, 210, 0.9);
       background-color: white;
@@ -59,17 +62,18 @@ if (isset($_POST['logout-submit'])) {
 
     .nav-left {
       flex: 1;
+      /* background-color: red; */
     }
 
     .nav-left h1,
     .nav-left span {
       font-family: "Great Vibes";
-      font-size: 36px;
-      width: 200px;
+      font-size: 38px;
     }
 
     .nav-center {
       flex: 2;
+      /* background-color: blue; */
     }
 
     .nav-center ul,
@@ -129,7 +133,9 @@ if (isset($_POST['logout-submit'])) {
 
     .logout-btn {
       background-color: #dc3545;
+      /* Danger/Red color */
       color: #fff;
+      /* White text color */
       border: none;
       border-radius: 4px;
       padding: 8px 16px;
@@ -142,6 +148,7 @@ if (isset($_POST['logout-submit'])) {
 
     .logout-btn:hover {
       background-color: #c82333;
+      /* Slightly darker red on hover */
     }
 
     .nav-center ul li a::before {
@@ -161,6 +168,7 @@ if (isset($_POST['logout-submit'])) {
 
     .nav-right {
       flex: 1;
+      /* background-color: bisque; */
     }
 
     .nav-right ul {
@@ -169,120 +177,76 @@ if (isset($_POST['logout-submit'])) {
       gap: 10px;
     }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 4px;
-      margin: 3px;
-      background-color: black;
-      transition: all 0.3s ease;
-    }
-
-    .nav-menu {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding-left: 6vw;
-      gap: 45px;
-      transition: max-height 0.7s;
-      overflow: hidden;
-    }
 
     @media(max-width:950px) {
       .navbar {
-        align-items: center;
-        padding: 10px 40px;
-        align-items: baseline;
-        flex-direction: column;
-      }
-
-      .hamburger {
-        display: flex;
-        position: absolute;
-        right: 30;
-        top: 20;
-        z-index: 10px;
-      }
-
-      .nav-menu {
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        max-height: 0;
-      }
-
-      .nav-menu.active {
-        position: relative;
-        max-height: 500px;
+        justify-content: center;
       }
 
       .nav-center ul,
       .nav-right ul {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 20px;
       }
 
+      .nav-right ul,
       .nav-right {
-        margin-top: -20px;
+        justify-content: center;
+        align-items: center;
       }
     }
   </style>
+
 </head>
 
 <body>
+
   <div class="navbar">
     <div class="nav-left">
-      <h1>Food <span style="color:orange;">Recipe</span></h1>
+      <h1>Food <span style="color:orange;">Recipe</span> </h1>
     </div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="center-and-left">
+
     </div>
 
-    <div class="nav-menu">
-      <div class="nav-center">
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="recipes.php">Recipes</a></li>
-          <?php if (!$user) { ?>
-            <li><a href="register.php">Post Recipe</a></li>
-          <?php } else { ?>
-            <li><a href="post_recipe.php">Post Recipe</a></li>
-          <?php } ?>
-          <li><a href="contact_me.php">Contact</a></li>
-        </ul>
-      </div>
-      <div class="nav-right">
-        <ul>
-          <?php if (!$user) { ?>
-            <li><a href="register.php"><button class="register-btn">Register</button></a></li>
-            <li><a href="login.php"><button class="login-btn">Login</button></a></li>
-          <?php } else { ?>
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post"><button type="submit" name="logout-submit" class="logout-btn">Logout</button></form>
-          <?php } ?>
-        </ul>
-      </div>
+    <div class="nav-center">
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="recipes.php">Recipes</a></li>
+
+        <?php if (!$user) { ?>
+
+          <li><a href="register.php">Post Recipe</a></li>
+        <?php } else { ?>
+
+          <li><a href="post_recipe.php">Post Recipe</a></li>
+
+        <?php } ?>
+
+        <li><a href="contact_me.php">Contact</a></li>
+      </ul>
     </div>
 
+    <div class="nav-right">
+      <ul>
+        <?php if (!$user) { ?>
+
+
+          <li><a href="register.php"><button class="register-btn">Register</button></a></li>
+          <li><a href="login.php"><button class="login-btn">Login</button></a></li>
+        <?php } else { ?>
+          <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post"><button type="submit" name="logout-submit" class="logout-btn">Logout</button></form>
+        <?php } ?>
+
+      </ul>
+    </div>
   </div>
 
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-menu').classList.toggle('active');
-      // document.querySelectorAll('.hamburger div').forEach((bar, index) => {
-      //   bar.classList.toggle(`bar${index + 1}-active`);
-      // });
-    }
-  </script>
 </body>
 
 </html>
