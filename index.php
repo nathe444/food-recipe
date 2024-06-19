@@ -194,6 +194,11 @@ include('./config/database.php');
       gap: 20px;
     }
 
+    .categories-container a {
+      text-decoration: none;
+      color: black;
+    }
+
     .category-card {
       padding: 20px;
       background-color: orange;
@@ -398,48 +403,29 @@ include('./config/database.php');
     <h1 data-aos="fade-up" data-aos-duration="1500">Categories</h1>
 
     <div class="categories-container" data-aos="fade-right" data-aos-duration="1500">
-      <div class="category-card">
-        <a href="recipes.php?search=breakfast">Breakfast</a>
-      </div>
-      <div class="category-card">
-        <a href="recipes.php?search=lunch">Lunch</a>
-      </div>
 
-      <div class="category-card">
-        <a href="recipes.php?search=dinner">Dinner</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=breakfast">Breakfast</a>
 
-      <div class="category-card">
-        <a href="recipes.php?search=dessert">Dessert</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=lunch">Lunch</a>
 
-      <div class="category-card">
-        <a href="recipes.php?search=snack">Snack</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=dinner">Dinner</a>
 
-      <div class="category-card">
-        <a href="recipes.php?search=appetizer">Appetizer</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=dessert">Dessert</a>
 
-      <div class="category-card">
-        <a href="recipes.php?search=beverage">Beverage</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=snack">Snack</a>
 
-      <div class="category-card">
-        <a href="recipes.php?search=soup">Soup</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=appetizer">Appetizer</a>
 
-      <div class="category-card">
-        <a href="recipes.php?search=drink">Drink</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=beverage">Beverage</a>
 
-      <div class="category-card">
-        <a href="recipes.php?search=meat">Meat</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=soup">Soup</a>
 
-      <div class="category-card">
-        <a href="recipes.php?search=vegan">Vegan</a>
-      </div>
+      <a class="category-card" href="recipes.php?search=drink">Drink</a>
+
+      <a class="category-card" href="recipes.php?search=meat">Meat</a>
+
+      <a class="category-card" href="recipes.php?search=vegan">Vegan</a>
+
     </div>
   </div>
 
