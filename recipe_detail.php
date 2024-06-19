@@ -69,14 +69,14 @@ mysqli_close($conn);
     .container-up {
       display: flex;
       gap: 80px;
+      justify-content: space-between;
+
     }
 
     .recipe-header-info {
       display: flex;
       flex-direction: column;
       gap: 0px;
-      max-width: 600px;
-      margin: 0 auto;
     }
 
     .recipe-header {
@@ -94,7 +94,7 @@ mysqli_close($conn);
     }
 
     .recipe-header img {
-      width: 60%;
+      width: 100%;
       height: auto;
       border-radius: 10px;
       margin-top: 20px;
@@ -108,6 +108,7 @@ mysqli_close($conn);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
+      gap: 30px;
     }
 
     .recipe-info div {
@@ -124,6 +125,8 @@ mysqli_close($conn);
     .instruction-and-ingredients {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      width: 99%;
     }
 
     .recipe-section {
