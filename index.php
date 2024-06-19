@@ -112,6 +112,7 @@ include('./config/database.php');
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       place-items: center;
       row-gap: 50px;
+      column-gap: 20px;
     }
 
     .recipe-card {
@@ -120,19 +121,23 @@ include('./config/database.php');
       border-radius: 20px;
       box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
       overflow: hidden;
-      transition: 0.33s;
     }
 
     .recipe-card:hover {
       cursor: pointer;
+      transition: ease 0.2s;
       scale: 1.1;
     }
+
+
 
     .recipe-image img {
       width: 100%;
       height: 270px;
+      object-fit: fill;
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
+      object-fit: cover;
     }
 
     .recipe-content {
@@ -346,6 +351,7 @@ include('./config/database.php');
       .landing-recipes-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         justify-content: center;
+        column-gap: 20px;
       }
 
       .recipe-card {
@@ -446,7 +452,7 @@ include('./config/database.php');
     <div class="landing-recipes-container">
       <div class="recipe-card" data-aos="zoom-in" data-aos-duration="1500">
         <div class="recipe-image">
-          <img src="./images/choco.jpg" alt="" />
+          <img src="./images/choco-2.jpg" alt="" />
         </div>
         <div class="recipe-content">
           <h1 class="recipe-title">Chocolate Chip Cookies</h1>
@@ -457,7 +463,7 @@ include('./config/database.php');
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
-              <span>Catagory</span>
+              <span>Snack</span>
             </div>
           </div>
         </div>
@@ -465,18 +471,18 @@ include('./config/database.php');
 
       <div class="recipe-card" data-aos="zoom-out" data-aos-duration="1500">
         <div class="recipe-image">
-          <img src="./images/choco.jpg" alt="" />
+          <img src="./images/pasta.jpg" alt="" />
         </div>
         <div class="recipe-content">
           <h1 class="recipe-title">Chocolate Chip Cookies</h1>
           <div class="recipe-info">
             <div>
               <img src="./images/clock.png" alt="" />
-              <span>30 min</span>
+              <span>25 min</span>
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
-              <span>Catagory</span>
+              <span>Lunch</span>
             </div>
           </div>
         </div>
@@ -484,7 +490,7 @@ include('./config/database.php');
 
       <div class="recipe-card" data-aos="zoom-in" data-aos-duration="1500">
         <div class="recipe-image">
-          <img src="./images/choco.jpg" alt="" />
+          <img src="./images/salad.jpg" alt="" />
         </div>
         <div class="recipe-content">
           <h1 class="recipe-title">Chocolate Chip Cookies</h1>
@@ -495,7 +501,7 @@ include('./config/database.php');
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
-              <span>Catagory</span>
+              <span>Vegan</span>
             </div>
           </div>
         </div>
@@ -503,7 +509,7 @@ include('./config/database.php');
 
       <div class="recipe-card" data-aos="zoom-out" data-aos-duration="1500">
         <div class="recipe-image">
-          <img src="./images/choco.jpg" alt="" />
+          <img src="./images/smoothie.avif" alt="" />
         </div>
         <div class="recipe-content">
           <h1 class="recipe-title">Chocolate Chip Cookies</h1>
@@ -514,7 +520,7 @@ include('./config/database.php');
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
-              <span>Catagory</span>
+              <span>Dessert</span>
             </div>
           </div>
         </div>
@@ -522,7 +528,7 @@ include('./config/database.php');
 
       <div class="recipe-card" data-aos="zoom-in" data-aos-duration="1500">
         <div class="recipe-image">
-          <img src="./images/choco.jpg" alt="" />
+          <img src="./images/pancake.jpg" alt="" />
         </div>
         <div class="recipe-content">
           <h1 class="recipe-title">Chocolate Chip Cookies</h1>
@@ -533,7 +539,7 @@ include('./config/database.php');
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
-              <span>Catagory</span>
+              <span>Breakfast</span>
             </div>
           </div>
         </div>
@@ -541,7 +547,7 @@ include('./config/database.php');
 
       <div class="recipe-card" data-aos="zoom-out" data-aos-duration="1500">
         <div class="recipe-image">
-          <img src="./images/choco.jpg" alt="" />
+          <img src="./images/cocktail.jpg" alt="" />
         </div>
         <div class="recipe-content">
           <h1 class="recipe-title">Chocolate Chip Cookies</h1>

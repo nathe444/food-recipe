@@ -6,10 +6,9 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-// Define a default search query if none provided
 $search = isset($_GET['search']) ? mysqli_real_escape_string($conn, $_GET['search']) : '';
 
-// SQL query to fetch recipes based on search term
+
 $sql = "SELECT * FROM recipes WHERE title LIKE '%$search%' OR category LIKE '%$search%'";
 $result = mysqli_query($conn, $sql);
 
@@ -194,8 +193,7 @@ $result = mysqli_query($conn, $sql);
       <?php
       if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-          // Generate link to recipe detail page
-          $recipeId = $row['recipe_id']; // Assuming your recipe table has an 'id' column
+          $recipeId = $row['recipe_id'];
           $recipeLink = 'recipe_detail.php?id=' . $recipeId;
 
           echo "<a href='$recipeLink' class='recipe-link'>";
