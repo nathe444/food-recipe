@@ -197,7 +197,7 @@ if (isset($_POST['logout-submit'])) {
     @media(max-width:950px) {
       .navbar {
         align-items: center;
-        padding: 10px 40px;
+        padding: 15px 40px;
         align-items: baseline;
         flex-direction: column;
       }
@@ -206,7 +206,7 @@ if (isset($_POST['logout-submit'])) {
         display: flex;
         position: absolute;
         right: 30;
-        top: 20;
+        top: 16;
         z-index: 10px;
       }
 
@@ -220,6 +220,7 @@ if (isset($_POST['logout-submit'])) {
       .nav-menu.active {
         position: relative;
         max-height: 500px;
+        align-items: center;
       }
 
       .nav-center ul,
