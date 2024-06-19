@@ -443,9 +443,9 @@ include('./config/database.php');
     </div>
   </div>
 
-  <div class="landing-recipes">
-    <h1 data-aos="fade-left" data-aos-duration="1500">Simple And Tasty Recipes</h1>
-    <p data-aos="fade-left" data-aos-duration="1500">
+  <div class="landing-recipes" data-aos="fade-up" data-aos-duration="1500">
+    <h1>Simple And Tasty Recipes</h1>
+    <p>
       Discover a collection of easy-to-make and delicious recipes that will delight your taste buds. Our recipes are crafted to be simple yet flavorful, perfect for both beginners and experienced cooks. Whether you're looking for a quick meal after a busy day or a sumptuous dish to impress your guests, we've got you covered.
     </p>
 
