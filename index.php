@@ -474,11 +474,11 @@ include('./config/database.php');
           <img src="./images/pasta.jpg" alt="" />
         </div>
         <div class="recipe-content">
-          <h1 class="recipe-title">Chocolate Chip Cookies</h1>
+          <h1 class="recipe-title">Pasta</h1>
           <div class="recipe-info">
             <div>
               <img src="./images/clock.png" alt="" />
-              <span>25 min</span>
+              <span>35 min</span>
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
@@ -493,11 +493,11 @@ include('./config/database.php');
           <img src="./images/salad.jpg" alt="" />
         </div>
         <div class="recipe-content">
-          <h1 class="recipe-title">Chocolate Chip Cookies</h1>
+          <h1 class="recipe-title">Salad</h1>
           <div class="recipe-info">
             <div>
               <img src="./images/clock.png" alt="" />
-              <span>30 min</span>
+              <span>20 min</span>
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
@@ -512,11 +512,11 @@ include('./config/database.php');
           <img src="./images/smoothie.avif" alt="" />
         </div>
         <div class="recipe-content">
-          <h1 class="recipe-title">Chocolate Chip Cookies</h1>
+          <h1 class="recipe-title">Smoothie</h1>
           <div class="recipe-info">
             <div>
               <img src="./images/clock.png" alt="" />
-              <span>30 min</span>
+              <span>25 min</span>
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
@@ -531,7 +531,7 @@ include('./config/database.php');
           <img src="./images/pancake.jpg" alt="" />
         </div>
         <div class="recipe-content">
-          <h1 class="recipe-title">Chocolate Chip Cookies</h1>
+          <h1 class="recipe-title">Pancake</h1>
           <div class="recipe-info">
             <div>
               <img src="./images/clock.png" alt="" />
@@ -550,15 +550,15 @@ include('./config/database.php');
           <img src="./images/cocktail.jpg" alt="" />
         </div>
         <div class="recipe-content">
-          <h1 class="recipe-title">Chocolate Chip Cookies</h1>
+          <h1 class="recipe-title">Cocktail</h1>
           <div class="recipe-info">
             <div>
               <img src="./images/clock.png" alt="" />
-              <span>30 min</span>
+              <span>20 min</span>
             </div>
             <div>
               <img src="./images/knife-fork.png" alt="" />
-              <span>Catagory</span>
+              <span>Beverage</span>
             </div>
           </div>
         </div>
