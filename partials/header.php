@@ -61,6 +61,11 @@ if (isset($_POST['logout-submit'])) {
       flex: 1;
     }
 
+    .nav-left a {
+      text-decoration: none;
+      color: black;
+    }
+
     .nav-left h1,
     .nav-left span {
       font-family: "Great Vibes";
@@ -240,7 +245,9 @@ if (isset($_POST['logout-submit'])) {
 <body>
   <div class="navbar">
     <div class="nav-left">
-      <h1>Food <span style="color:orange;">Recipe</span></h1>
+      <a href="index.php">
+        <h1>Food <span style="color:orange;">Recipe</span></h1>
+      </a>
     </div>
 
     <div class="hamburger" onclick="toggleMenu()">
