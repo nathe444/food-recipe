@@ -467,7 +467,7 @@ $result = mysqli_query($conn, $sql);
           $recipeLink = 'recipe_detail.php?id=' . $recipeId;
 
           echo "<a href='$recipeLink' class='recipe-link'>";
-          echo "<div class='recipe-card'>";
+          echo "<div class='recipe-card' data-aos='zoom-in' data-aos-duration='1500'>";
           echo "<div class='recipe-image'><img src='" . htmlspecialchars($row['image_path']) . "' alt='Recipe Image'></div>";
           echo "<div class='recipe-content'>";
           echo "<h1 class='recipe-title'>" . htmlspecialchars($row['title']) . "</h1>";
