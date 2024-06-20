@@ -120,6 +120,7 @@ $result = mysqli_query($conn, $sql);
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       place-items: center;
       row-gap: 60px;
+      padding: 0px 50px;
     }
 
     .recipe-card {
