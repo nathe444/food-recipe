@@ -81,7 +81,7 @@ include('./config/database.php');
       </div>
       <div class="form-group">
         <label for="time">Total Time (minutes)</label>
-        <input type="number" id="time" name="time" placeholder="Enter total time" required />
+        <input type="number" id="time" name="time" placeholder="Enter total time" min="1" required />
       </div>
       <div class="form-group">
         <label for="category">Category</label>

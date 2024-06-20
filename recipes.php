@@ -108,10 +108,11 @@ $result = mysqli_query($conn, $sql);
     }
 
     .recipe-image img {
-      width: 80%;
-      height: 250px;
+      width: 100%;
+      height: 260px;
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
+      object-fit: cover;
     }
 
     .recipe-content {

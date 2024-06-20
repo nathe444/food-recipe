@@ -1,6 +1,14 @@
 <?php
 include('./partials/header.php');
 include('./config/database.php');
+
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM recipes where user_id = '18'";
+$result = mysqli_query($conn, $sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -83,8 +91,8 @@ include('./config/database.php');
     }
 
     .landing-recipes {
-      padding: 0px 50px;
-      margin-bottom: 50px;
+      padding: 0px 0px;
+
     }
 
     .landing-recipes>h1,
@@ -104,15 +112,14 @@ include('./config/database.php');
       margin-top: 15px;
       color: rgb(111, 109, 109);
       margin-bottom: 50px;
-
+      padding: 0px 50px;
     }
 
     .landing-recipes-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       place-items: center;
-      row-gap: 50px;
-      column-gap: 20px;
+      row-gap: 60px;
     }
 
     .recipe-card {
@@ -235,8 +242,8 @@ include('./config/database.php');
       background-repeat: no-repeat;
       background-size: cover;
       height: 550px;
-      padding: 0px 100px;
       margin-top: 100px;
+      width: 100%;
     }
 
     .about-content {
@@ -289,7 +296,17 @@ include('./config/database.php');
       text-align: right;
     }
 
+    .recipe-link {
+      text-decoration: none;
+      color: black;
 
+    }
+
+    .recipe-link:hover {
+      .recipe-title {
+        text-decoration: underline;
+      }
+    }
 
     /* .about-image img {
         max-width: 100%;
@@ -307,6 +324,9 @@ include('./config/database.php');
 
       .landing-2 {
         flex-direction: column;
+        padding: 0px;
+        padding: 0px 50px;
+        margin-top: 60px;
       }
 
       .landing-left,
@@ -362,13 +382,14 @@ include('./config/database.php');
       .recipe-card {
         width: 300px;
       }
+
     }
 
 
     @media(max-width:1100px) {
       .about-us {
         height: 820px;
-        padding: 0px 00px;
+        padding: 0px 0px;
       }
 
       .about-content {
@@ -430,13 +451,41 @@ include('./config/database.php');
   </div>
 
   <div class="landing-recipes" data-aos="fade-up" data-aos-duration="1500">
+
     <h1>Simple And Tasty Recipes</h1>
     <p>
       Discover a collection of easy-to-make and delicious recipes that will delight your taste buds. Our recipes are crafted to be simple yet flavorful, perfect for both beginners and experienced cooks. Whether you're looking for a quick meal after a busy day or a sumptuous dish to impress your guests, we've got you covered.
     </p>
 
     <div class="landing-recipes-container">
-      <div class="recipe-card" data-aos="zoom-in" data-aos-duration="1500">
+
+      <?php
+      if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          $recipeId = $row['recipe_id'];
+          $recipeLink = 'recipe_detail.php?id=' . $recipeId;
+
+          echo "<a href='$recipeLink' class='recipe-link'>";
+          echo "<div class='recipe-card'>";
+          echo "<div class='recipe-image'><img src='" . htmlspecialchars($row['image_path']) . "' alt='Recipe Image'></div>";
+          echo "<div class='recipe-content'>";
+          echo "<h1 class='recipe-title'>" . htmlspecialchars($row['title']) . "</h1>";
+          echo "<div class='recipe-info'>";
+          echo "<div><img src='./images/clock.png' alt=''><span>" . htmlspecialchars($row['total_time']) . " min</span></div>";
+          echo "<div><img src='./images/knife-fork.png' alt=''><span>" . htmlspecialchars($row['category']) . "</span></div>";
+          echo "</div>";
+          echo "</div>";
+          echo "</div>";
+          echo "</a>";
+        }
+      } else {
+        echo "<p>No recipes found</p>";
+      }
+
+      mysqli_close($conn);
+      ?>
+
+      <!-- <div class="recipe-card" data-aos="zoom-in" data-aos-duration="1500">
         <div class="recipe-image">
           <img src="./images/choco-2.jpg" alt="" />
         </div>
@@ -549,55 +598,55 @@ include('./config/database.php');
           </div>
         </div>
       </div>
+    </div> -->
     </div>
-  </div>
-  <div class="landing landing-2">
-    <div class="landing-right" data-aos="flip-right" data-aos-duration="1500">
-      <img src="./images/chef.png" alt="" />
+    <div class="landing landing-2">
+      <div class="landing-right" data-aos="flip-right" data-aos-duration="1500">
+        <img src="./images/chef.png" alt="" />
+      </div>
+      <div class="landing-left" data-aos="fade-down" data-aos-duration="1500">
+        <h1 class="chef-h1">
+          Everyone Can Be A <br />Chef In Their Own <br />
+          Kitchen
+        </h1>
+        <p>
+          Unlock the joy of cooking with our easy-to-follow recipes and become the chef you've always wanted to be. Whether you're a novice or a seasoned home cook, our recipes are designed to inspire and delight. Create delicious dishes from the comfort of your kitchen and experience the satisfaction of homemade meals. Enjoy the process of cooking with fresh, wholesome ingredients and see how simple it can be to make restaurant-quality dishes at home. With our guidance, everyone can be a chef in their own kitchen and turn every meal into a culinary masterpiece.
+        </p>
+      </div>
     </div>
-    <div class="landing-left" data-aos="fade-down" data-aos-duration="1500">
-      <h1 class="chef-h1">
-        Everyone Can Be A <br />Chef In Their Own <br />
-        Kitchen
-      </h1>
-      <p>
-        Unlock the joy of cooking with our easy-to-follow recipes and become the chef you've always wanted to be. Whether you're a novice or a seasoned home cook, our recipes are designed to inspire and delight. Create delicious dishes from the comfort of your kitchen and experience the satisfaction of homemade meals. Enjoy the process of cooking with fresh, wholesome ingredients and see how simple it can be to make restaurant-quality dishes at home. With our guidance, everyone can be a chef in their own kitchen and turn every meal into a culinary masterpiece.
-      </p>
-    </div>
-  </div>
-  <section class="about-us">
-    <div class="about-content" data-aos="fade-up" data-aos-duration="1500">
-      <h2 class="about-title">About Our Recipe Website</h2>
-      <p class="about-description">
-        Welcome to our recipe website! We are a team of passionate home cooks
-        and food enthusiasts who have come together to share our love for
-        delicious and nourishing meals. Our mission is to provide you with a
-        vast collection of recipes that cater to a wide range of dietary
-        preferences and cooking levels.
-      </p>
-      <p class="about-description">
-        At the heart of our website is a desire to inspire and empower you in
-        the kitchen. Whether you're a seasoned chef or a beginner cook, you'll
-        find a wealth of recipes, tips, and resources to help you create
-        mouthwatering dishes that your family and friends will love.
-      </p>
-      <p class="about-description">
-        Join us on this culinary journey as we explore new flavors, discover
-        innovative techniques, and share our passion for food with you. We're
-        excited to see what you create in the kitchen and can't wait to hear
-        your feedback and recipe suggestions.
-      </p>
-      <p class="last">&copy; 2024 NatheWorks. All Rights Reserved.</p>
-    </div>
-    <!-- <div class="about-image">
+    <section class="about-us">
+      <div class="about-content" data-aos="fade-up" data-aos-duration="1500">
+        <h2 class="about-title">About Our Recipe Website</h2>
+        <p class="about-description">
+          Welcome to our recipe website! We are a team of passionate home cooks
+          and food enthusiasts who have come together to share our love for
+          delicious and nourishing meals. Our mission is to provide you with a
+          vast collection of recipes that cater to a wide range of dietary
+          preferences and cooking levels.
+        </p>
+        <p class="about-description">
+          At the heart of our website is a desire to inspire and empower you in
+          the kitchen. Whether you're a seasoned chef or a beginner cook, you'll
+          find a wealth of recipes, tips, and resources to help you create
+          mouthwatering dishes that your family and friends will love.
+        </p>
+        <p class="about-description">
+          Join us on this culinary journey as we explore new flavors, discover
+          innovative techniques, and share our passion for food with you. We're
+          excited to see what you create in the kitchen and can't wait to hear
+          your feedback and recipe suggestions.
+        </p>
+        <p class="last">&copy; 2024 NatheWorks. All Rights Reserved.</p>
+      </div>
+      <!-- <div class="about-image">
         <img src="./images/dishes.png" alt="About Us Image" />
       </div> -->
-  </section>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

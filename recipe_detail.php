@@ -98,6 +98,7 @@ mysqli_close($conn);
       height: auto;
       border-radius: 10px;
       margin-top: 20px;
+      max-height: 500px;
     }
 
     .recipe-info {
