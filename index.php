@@ -6,7 +6,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM recipes where user_id = '18'";
+$sql = "SELECT * FROM recipes where username = 'nati'";
 $result = mysqli_query($conn, $sql);
 
 ?>
