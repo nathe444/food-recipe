@@ -57,9 +57,6 @@ $result = mysqli_query($conn, $sql);
 
     .landing-left h1 {
       font-size: 55px;
-      /* position: absolute;
-        top: 20%;
-        left: 15%; */
       color: black;
     }
 
@@ -100,6 +97,7 @@ $result = mysqli_query($conn, $sql);
       text-align: center;
       max-width: 820px;
       margin: auto;
+      padding: 0px 50px;
     }
 
     .landing-recipes>h1 {
@@ -112,7 +110,7 @@ $result = mysqli_query($conn, $sql);
       margin-top: 15px;
       color: rgb(111, 109, 109);
       margin-bottom: 50px;
-      padding: 0px 50px;
+
     }
 
     .landing-recipes-container {
